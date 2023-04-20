@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        //const é uma variavel que não pode ser alterada
+        const NOME = "Rafael"; //é obrigatorio declarar o valor em uma constante
+
+        //NOME = "Rafael"; //isso não é permitido geraria um erro pois a constante é somente leitura
+        function teste() {
+            const NOME = "Lucas"; //não vai gerar erro pois a constante é local dentro da função
+            console.log(NOME);
+        }
+        teste(); //chamando a função e passando o valor da constante da função
+        console.log(NOME); //chamando a constante global que não foi alterada dentro da função
+
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>

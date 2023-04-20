@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        let pessoa = {
+            nome: 'Arthur',
+            idade: 32,
+            sexo: 'Masculino',
+            profissao: 'Desenvolvedor',
+            exibirResumo: function(){
+                return `${this.nome} tem ${this.idade} anos, é do sexo ${this.sexo} e é ${this.profissao}`
+            }
+        }
+        pessoa.nome = 'João' //modificando o valor da propriedade nome
+        pessoa.idade = 25
+        pessoa.sexo = 'Masculino'
+        document.getElementById('input').innerHTML = pessoa.exibirResumo()
+        </script>
+</head>
+
+<body>
+    <div id="output"></div>
+    <!--Botão atualiza pagina-->
+    <p id="input" style="background-color: antiquewhite; width: 400px; border: 2px solid black; padding: 5px; "></p>
+    <!--button onclick="window.location.reload()">Atualizar</button-->
+</body>
+
+</html>

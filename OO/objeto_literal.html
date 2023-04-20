@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        class Produto {
+            constructor(descricao, preco) {
+                this.descricao = descricao
+                this.preco = preco
+            }
+            verDescricao() {
+                return `${this.descricao} por apenas ${this.preco}`
+            }
+        }
+        //let produto = new Produto(prompt('Descrição do produto:'), prompt('Preço do produto:'))
+        let produto = new Produto('notibuiq', 1000)
+
+
+        let produtoLiteral = {
+            descricao: 'geladeira',
+            preco: 1800,
+            verDescricao: function() {
+                return `${this.descricao} por apenas ${this.preco}`
+            }
+        }
+        document.getElementById("input").innerHTML = produto.verDescricao()
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+    <!--Botão atualiza pagina-->
+    <p id="input" style="background-color: antiquewhite; width: 250px; border: 2px solid black; padding: 5px; "></p>
+    <button onclick="window.location.reload()">Atualizar</button>
+</body>
+
+</html>

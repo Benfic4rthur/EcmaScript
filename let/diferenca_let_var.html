@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+        //VAR
+        var serie = 'friends'
+        {
+            var serie = 'game of thrones'
+            console.log('dentro do bloco var ' + serie)
+        }
+        console.log('fora do bloco var ' + serie)
+
+        //LET   
+        let serie2 = 'breaking bad'
+        {
+            let serie2 = 'game of thrones'
+            console.log('dentro do bloco let: ' + serie2)
+        }
+        console.log('fora do bloco let ' + serie2)
+
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>

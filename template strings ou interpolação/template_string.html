@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        let nome = 'jorge';
+        console.log('Meu nome é ${nome}'); //interpolação de string diferente da concatenação com o sinal de +
+        function calcular(a, b) {
+            return a + b;
+        }
+        console.log(`O resultado da soma é ${calcular(2, 3)}`); //interpolação de string com função
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>

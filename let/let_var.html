@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        //VAR
+        //3 escopos: global, função e bloco
+        //global
+        /* var serie = 'Friends' //global pode ser acessada em qualquer lugar do código
+        console.log('global: ' + serie)
+        function x() {
+             var serie = 'Game of Thrones' //função só pode ser acessada dentro da função e dos blocos dentro da função
+            console.log('função: ' + serie)
+            if (true) {
+                console.log('bloco da função: ' + serie)
+            }
+        }
+        x()
+        if (true) {
+             console.log('global: ' + serie) // não apresenta erro, porem carrega o valor da variavel global e ignora o valor da variavel dentro da função x()
+         } */
+        //-------------------------------------------------
+        //escopo de bloco
+        /*function x() {
+            // var serie = 'Game of Thrones' //função só pode ser acessada dentro da função e dos blocos dentro da função
+            console.log('função: ' + serie)
+            if (true) {
+                console.log('bloco da função: ' + serie)
+            }
+        }
+        if (true) {
+            var serie = 'Breaking Bad' //por ser criada dentro de um bloco, ela sofre o hoisting e é criada no escopo global
+            console.log('global: ' + serie)
+        }
+        x() //ao fazer a chamada da função x() depois da criação da variavel global, ela é carregada dentro da função
+        console.log('global: ' + serie)*/
+        //-------------------------------------------------
+        //escopo de bloco dentro de uma função
+        /*function x() {
+            // var serie = 'Game of Thrones' //função só pode ser acessada dentro da função e dos blocos dentro da função
+            if (true) {
+                var serie = 'Breaking Bad' //por ser criada dentro de um bloco de uma função, ela sofre o hoisting e fica acessivel apenas na função
+                console.log('bloco da função: ' + serie)
+            }
+            console.log('função: ' + serie)
+        }
+        x()
+        if (true) {
+            console.log('global: ' + serie)
+        }
+        console.log('global: ' + serie)*/
+        //-------------------------------------------------
+        //LET
+        //3 escopos: global, função e bloco
+        //O LET NÃO SOFRE HOISTING
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>

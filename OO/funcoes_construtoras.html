@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        let Carro = function(){
+            this.cor = "vermelho";
+            this.modelo = "Fusca";
+            this.velocidadeAtual = 0;
+            this.velocidadeMaxima = 80;
+            this.acelerar = function(){
+                let velocidade = this.getVelocidadeAtual() + 10;
+                this.setVelocidadeAtual(velocidade);
+            }
+            this.getVelocidadeAtual = function(){
+                return this.velocidadeAtual;
+            }
+            this.setVelocidadeAtual = function(velocidadeAtual){
+                this.velocidadeAtual = velocidadeAtual;
+            }
+        }
+        let carro = new Carro();
+        console.log(`Velocidade atual: ${carro.getVelocidadeAtual()}`);
+        carro.acelerar();
+        console.log(`Velocidade atual: ${carro.getVelocidadeAtual()}`);
+        carro.acelerar();
+        console.log(`Velocidade atual: ${carro.getVelocidadeAtual()}`);
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+    <!--p id="input" style="background-color: antiquewhite; width: 400px; border: 2px solid black; padding: 5px; "></p>
+    <button onclick="window.location.reload()">Atualizar</button-->
+</body>
+
+</html>

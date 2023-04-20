@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        //objeto literal
+        let Aviao = {
+            modelo: "Boeing 737",
+            fabricante: "Boeing",
+            ano: 2019,
+            levantarVoo() { console.log("Levantando voo..."); }
+        }
+        //função construtora
+        let Aviao2 = function () {
+            this.modelo = "Boeing 747",
+                this.fabricante = "Boeing",
+                this.ano = 2019,
+                this.levantarVoo = function () { console.log("Levantando voo..."); }
+        }
+        let aviao2 = new Aviao2();
+
+        //classe 
+        class Aviao3 {
+            constructor() {
+                this.modelo = "E-Jet E2",
+                    this.fabricante = "Embraer",
+                    this.ano = 2016
+            }
+            levantarVoo() { console.log("Levantando voo..."); }
+        }
+        let aviao3 = new Aviao3();
+
+        console.log(Aviao);
+        console.log(aviao2);
+        console.log(aviao3);
+
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+
+</body>
+
+</html>

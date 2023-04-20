@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+        Object.prototype.atributo0 = 'z' //atributo0 vai estar disponível para todos os objetos
+        //objeto literal com cadeia de protótipos (prototype chain)
+        let animal = { atributo1: 'a' }
+        let vertebrado = { __proto__: animal, atributo2: 'b' }
+        let ave = { __proto__: vertebrado, atributo3: 'c', atributo2: 'x' } //caso sobreponha um atributo, o JS vai pegar o mais recente para aquele objeto
+
+        console.log(ave.atributo1) //a
+        console.log(ave.atributo2) //b
+        console.log(ave.atributo3) //c
+        console.log(ave.atributo0) //z
+
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+
+</body>
+
+</html>

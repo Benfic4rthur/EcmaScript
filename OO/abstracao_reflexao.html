@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        //paradigma procedural
+        /*let pernas = 4
+        let giratoria = false
+        let cor = "azul"
+
+        let cadeiras = [] //array de cadeiras
+        cadeiras[0] = Array()
+        cadeiras[0].pernas = 4
+        cadeiras[0].giratoria = false
+        cadeiras[0].cor = "azul"
+
+        cadeiras[1] = Array()
+        cadeiras[1].pernas = 1
+        cadeiras[1].giratoria = true
+        cadeiras[1].cor = "vermelha"
+        function girar(indice) {
+            if (cadeiras[indice]['giratoria'] === true) {
+                pernas = 1
+                console.log(`A cadeira é giratoria e tem ${pernas} perna`)
+            }
+            else if (cadeiras[indice]['giratoria'] === false) {
+                console.log(`A cadeira não é giratória e tem ${pernas} pernas`)
+            }
+        }
+        //girar(0)
+        function adicionarCadeira(pernas, giratoria, cor) {
+            let cadeira = Array()
+            cadeira.pernas = 3 //passar por parametro direto
+            cadeira.giratoria = false
+            cadeira.cor = "azul"
+            cadeiras.push(cadeira)
+            //outra forma de fazer
+            function adicionarCadeira(pernas, giratoria, cor) {
+            let cadeira = Array()
+            cadeira['pernas'] = pernas //atribui o parametro ao atributo do objeto
+            cadeira['giratoria'] = giratoria
+            cadeira['cor'] = cor
+            cadeiras.push(cadeira)
+        }
+        adicionarCadeira(3, false, "verde")
+        console.log(cadeiras)
+        }
+        adicionarCadeira()
+        console.log(cadeiras) */
+        //paradigma orientado a objetos
+        class Cadeira {
+            constructor(pernas, giratoria, cor) {
+                this.pernas = pernas //variaveis com this são atributos do objeto e as sem this são variaveis locais da função
+                this.giratoria = giratoria
+                this.cor = cor
+            }
+            girarCadeira() {
+                if (this.giratoria === true && this.pernas === 1) {
+                    console.log("A cadeira é giratoria")
+                }
+                else if (this.giratoria === false && this.pernas > 1) {
+                    console.log("A cadeira não é giratória")
+                }else if (this.giratoria === true && this.pernas > 1) {
+                    console.log("Ta estranha essa cadeira ai")
+                }
+            }
+        }
+        let qtdPernas = prompt("Quantas pernas tem a cadeira?")
+        let cadeiraGira = prompt("A cadeira é giratória? (s/n)")
+        if (cadeiraGira === "s") {
+            cadeiraGira = true
+        }
+        else if (cadeiraGira === "n") {
+            cadeiraGira = false
+        }
+        let corCadeira = prompt("Qual a cor da cadeira?")
+        let cadeira = new Cadeira(qtdPernas, cadeiraGira, corCadeira)
+        cadeira.girarCadeira()
+
+
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>

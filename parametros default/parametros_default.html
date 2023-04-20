@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        function contarUmaHistoria(personagem = 'Lucas', cachorro = 'Pirata')
+        //parametros default disponibilizados a partir do ES6 caso não seja passado nenhum valor para a função
+        {
+            document.write(`Era uma vez um menino chamado ${personagem} que tinha um cachorro chamado ${cachorro}.`);
+        }
+        contarUmaHistoria('Jorge', undefined);
+        //undefined é um valor válido para o parametro default, pode-se passar valores de outros parametros e os que não forem informados irão receber o valor default
+        //pré estabelecido ao inicializar a função
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>

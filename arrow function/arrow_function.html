@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        //função anonima normal
+        let quadrado = function (x) {
+            return x * x;
+        }
+        document.write(`O quadrado de 2 é ${quadrado(2)}`); //interpolação de string com função
+
+        //arrow function apenas um parametro
+        let quadrado2 = x => x * x; //sem parenteses quando só tem um parametro e sem chaves quando só tem uma linha de código ou retorno
+        //chama-se retorno implícito não utilizar as chaves e nem a palavra return
+        document.write(`<br>O quadrado de 3 é ${quadrado2(3)}`); //interpolação de string com função
+
+        //arrow function com mais de um parametro ou sem nenhum
+        let quadrado3 = (x, y) => x * y; //com parenteses quando tem mais de um parametro
+        document.write(`<br>O quadrado de 4 e 5 é ${quadrado3(4, 5)}`); //interpolação de string com função
+
+        //arrow function sem parametro
+        let quadrado4 = () => 2 * 2; //sem parenteses quando não tem nenhum parametro
+        document.write(`<br>O quadrado de 2 é ${quadrado4()}`); //interpolação de string com função
+
+        //arrow function com mais de uma linha de código
+        let quadrado5 = (x, y) => {
+            let resultado = x * y;
+            return resultado;
+        }
+        document.write(`<br>O quadrado de 4 e 5 é ${quadrado5(4, 5)}`); //interpolação de string com função
+
+        //função anonima normal
+        let parOuImpar = function (numero) {
+            if (numero % 2 == 0) {
+                return 'par';
+            } else {
+                return 'impar';
+            }
+        }
+        document.write(`<br>O número 7 é ${parOuImpar(7)}`); //interpolação de string com função
+
+        //arrow function
+        let parOuImpar2 = numero => numero % 2 == 0 ? 'par' : 'impar'; //sem parenteses quando só tem um parametro e sem chaves quando só tem uma linha de código ou retorno
+        //chama-se retorno implícito não utilizar as chaves e nem a palavra return
+        document.write(`<br> ${parOuImpar2(10)}`); //interpolação de string com função
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>

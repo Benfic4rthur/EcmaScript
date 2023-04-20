@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        //modelo do objeto
+        class ContaBancaria {
+            //agencia
+            //numeroConta
+            //saldo
+            //limite
+            constructor() {
+                this.agencia = 1
+                this.numeroConta = 35217866
+                this.saldo = 10000
+                this.limite = 3000
+            }
+            depositar(valorDeposito) {
+                this.saldo += valorDeposito
+            }
+            sacar(valorSaque) {
+                this.saldo -= valorSaque
+            }
+            consultarSaldo() {
+                return this.saldo
+            }
+        }
+        let conta = new ContaBancaria();
+        let valordepositado = prompt("Digite o valor do deposito: ")
+        conta.depositar(parseInt(valordepositado))
+        document.write(conta.consultarSaldo())
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>

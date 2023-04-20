@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        //destructuring
+        //let frutas = ["banana", "maçã", "laranja", "uva"];
+        //let [fruta1, fruta2, , fruta4, fruta5 = "abacaxi"] = frutas; para pular um indice usa-se virgula caso não queira buscar um valor do array deixe em branco
+        //let [fruta1, fruta2, fruta3, fruta4, fruta5 = "abacaxi"] = frutas;
+        //casp coloque valor default em um indice que não existe no array ele será adicionado e caso exista ele será desconsiderado
+        //console.log(fruta1, fruta2, fruta4, fruta5);
+
+        let coisas = [["abacaxi", "banana", "maçã"], ["carro", "moto", "avião"], ["casa", "apartamento", "hotel"]];
+        let [frutas, veiculos, imoveis] = coisas; //como eu fiz, busquei todos os arrays e coloquei em variaveis
+        let [,[,n2]] = coisas; //como o professor fez, buscou apena o segundo array passando o primeiro em branco e anexou o valor do indice 2 em uma variavel
+        console.log(n2); // buscou apenas a variavel n2
+        console.log(imoveis[1]); // busquei apenas o array de imoveis e o indice 1
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+
+</body>
+
+</html>

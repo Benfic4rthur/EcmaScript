@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        //objeto literal composto
+        let produto = {
+            nome: "Smart TV",
+            preco: 2000,
+            detalhes: {
+                fabricante: "Samsung",
+                modelo: "UN40MU6300",
+                ano: 2018
+            }
+        }
+        //tokens
+        //array = []
+        //objeto = {}
+        //do lado esquerdo sempre será desestruturado
+        //let { nome, preco } =   produto; //buscou o nome e o preco do objeto produto
+        //let { nome : n, preco : p, desconto : d } = produto; //modificou o nome da variável
+        //console.log(n, p, d); //d vai ser undefined pq não existe no objeto produto
+        //let { nome :n, preco : p , desconto : d = 0.15} = produto; //desconto vai receber o valor default 0.15 pq não existe no objeto produto
+        //console.log(n, p, d);
+        let { nome: n, preco: p, desconto: d = 0.15, detalhes: de = { fabricante, modelo, ano } } = produto; //desconto vai receber o valor default 0.15 pq não existe no objeto produto
+        console.log(n, p, d, de);
+
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+
+</body>
+
+</html>

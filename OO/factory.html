@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        let bicicleta1 = {
+            cor: "vermelha",
+            modelo: "Caloi",
+            marcha: 'unica',
+            aro: 26,
+            pedalar: function () { console.log("Pedalando..."); }
+        }
+        let bicicleta2 = {
+            cor: "azul",
+            modelo: "Caloi",
+            marcha: 18,
+            aro: 20,
+            pedalar: function () { console.log("Pedalando..."); }
+        }
+        console.log(bicicleta1);
+        console.log(bicicleta2);
+
+        let bicicletaFactory = function (cor, modelo, marcha, aro) { // receber os parametros gera dinamismo
+            return {
+                cor,
+                modelo,
+                marcha,
+                aro,
+                pedalar: function () { console.log("Pedalando..."); }
+            }
+        }
+        let bicicleta3 = bicicletaFactory("verde", "trekk", 21, 29); //passar os parametros para a função da factory
+        console.log(bicicleta3);
+        console.log(`Cor bike1: ${bicicleta1.cor}`);
+        console.log(`Cor bike2: ${bicicleta2.cor}`);
+        console.log(`Cor bike3: ${bicicleta3.cor}`);
+        bicicleta3.pedalar();
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+    <!--p id="input" style="background-color: antiquewhite; width: 400px; border: 2px solid black; padding: 5px; "></p>
+    <button onclick="window.location.reload()">Atualizar</button-->
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        //classe pai
+        class Animal {
+            constructor(cor, tamanho, peso) { //são os parametros padrão da classe
+                this.cor = cor // faz a atribuição dos parametros para os atributos da classe
+                this.tamanho = tamanho
+                this.peso = peso
+            }
+            dormir() {
+                console.log('dormir')
+            }
+        }
+        //classes filhas
+        class Passaro extends Animal {
+            constructor(bico, cor, tamanho, peso) {  //recebe os parametros da classe filho
+                super(cor, tamanho, peso)//envia os parametros para a classe pai
+                this.bico = bico
+            }
+            voar() {
+                console.log('voar')
+            }
+        }
+        class Papagaio extends Passaro {
+            constructor(sabeFalar, cor, tamanho, peso) { //parametros recebidos pelo novo objeto
+                super('Médio', cor, tamanho, peso)//envia os parametros para a classe pai
+                this.sabeFalar = sabeFalar
+            }
+            falar() {
+                console.log('falar')
+            }
+        }
+        class Avestruz extends Passaro {
+            constructor(bico, cor, tamanho, peso) {
+                super(bico, cor, tamanho, peso)
+            }
+            correr() {
+                console.log('correr')
+            }
+            voar() {
+                console.log('não voa')
+            }
+        }
+        //da um certo dinamismo
+        let papagaio = new Papagaio(true, 'azul', 30, 300) //passa como parametro os atributos da classe
+        console.log(papagaio)
+        papagaio.voar()
+
+
+        let avestruz = new Avestruz('grande', 'marrom', 200, 100000)
+        console.log(avestruz)
+        avestruz.voar()
+
+        let avestruz2 = new Avestruz('grande', 'preto e marrom', 200, 120000)
+        console.log(avestruz2)
+        avestruz2.voar()
+
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>

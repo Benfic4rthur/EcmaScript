@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        let assinatura = {
+            idCliente: 1,
+            descricao: "Assinatura de teste",
+            status() {
+                console.log("Ativo")
+            }
+        }
+        console.log(assinatura.descricao)
+
+        let y = assinatura //não é uma copia é uma referência
+        console.log(y.descricao)
+
+        y.descricao = "Assinatura de teste alterada"
+        console.log(assinatura.descricao)
+        console.log(y.descricao)
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+    <!--p id="input" style="background-color: antiquewhite; width: 400px; border: 2px solid black; padding: 5px; "></p>
+    <button onclick="window.location.reload()">Atualizar</button-->
+</body>
+
+</html>

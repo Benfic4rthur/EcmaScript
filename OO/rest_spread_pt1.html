@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        //spread
+        //string
+        let tituloArtigo = 'como utilizar o spread operator';
+
+        //console.log(tituloArtigo);
+        //console.log(...tituloArtigo); //separando cada letra
+        //console.log([...tituloArtigo]); //separando cada letra e colocando em um array
+
+
+        //array
+        let listaCurso = ['html', 'css', 'js'];
+        let listaCurso2 = ['react', 'vue', 'angular'];
+        let listaCursoCompleto = [...listaCurso, ...listaCurso2]; //retorna um novo array com os dois arrays, separa por ','
+        console.log(listaCursoCompleto);
+
+        let pessoa = {
+            nome: 'joao',
+            idade: 20,
+            profissao: 'dev'
+        }
+        let clone = { endereco: 'otto daudt, 921', ...pessoa }; //retorna um novo objeto com os dados do objeto pessoa
+        console.log(pessoa);
+        console.log(clone);
+
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        class Tv {
+            constructor() {
+                this._canais = Array(2, 4, 5, 7, 9, 12)
+                this._canalAtivo = 5
+                this._volume = 5
+            }
+            //getters e setters
+            get canalAtivo() {
+                return this._canalAtivo
+            }
+            set canalAtivo(canal) {
+                //validar se o canal existe
+                if (this._canais.indexOf(canal) == -1) {
+                    console.log(`o canal ${canal} não existe`)
+                    return
+                } else {
+                    console.log(`o canal ${canal} foi selecionado`)
+                }
+                this._canalAtivo = canal
+            }
+        }
+        let tv = new Tv()
+        tv.canalAtivo = 12
+        console.log(tv.canalAtivo)//não usar parenteses pois é uma pseudo variavel
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>

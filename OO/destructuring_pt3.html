@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        //array
+        // let arr = [10, 20, 30, 40]
+        //function teste(a, b) {
+        //  console.log(a, b)
+        //}
+        //function teste1([a, b]) {
+        //   console.log(a, b)
+        // }
+        //teste(...arr) //como eu fiz, busquei o array e usei o spread operator para desestruturar o array
+        //teste(arr[0], arr[1]) //como o professor fez, ele buscou o array e desestruturou o array um a um passando o indice 0 e 1 do array para a e b da função teste
+        //teste1(arr) // terceira forma de fazer passando os [] no parametro da função teste1 assim ele vai desestruturar o array e passar o valor para a e b
+        //objeto
+        let obj = {
+            a: 10,
+            b: 20,
+            c: 30,
+            d: 40
+        }
+        function teste( a, b ) {
+            console.log(a, b)
+        }
+        function teste1({a, b}) {
+            console.log(a, b)
+        }
+        teste(obj.a, obj.b)
+        teste1(obj)
+
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+
+</body>
+
+</html>
